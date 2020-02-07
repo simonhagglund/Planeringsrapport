@@ -1,8 +1,21 @@
 \documentclass{article}
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{subfiles} % Best loaded last in the preamble
 \usepackage{float}
+\usepackage{comment}
+\usepackage{biblatex}
+\newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+\usepackage{array, booktabs}
+\usepackage{graphicx}
+\usepackage[x11names,table]{xcolor}
+\usepackage{caption}
+\usepackage[TS1,T1]{fontenc}
+\DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
+
+\usepackage{subfiles} % Ladda denna sist.
+
+\addbibresource{refs.bib}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -32,11 +45,15 @@
 \subfile{Introduction}
 \subfile{Background}
 \subfile{Purpose}
+\subfile{Problem}
 \subfile{Task}
 \subfile{Delimitation}
 \subfile{Method}
 \subfile{Ethics}
 \subfile{Timeline}
 
+\newpage
+\medskip
+\printbibliography
 
 \end{document}
