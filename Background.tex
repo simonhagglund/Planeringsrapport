@@ -1,6 +1,30 @@
+\newpage
+
 \section{Background}
-With this project we want to develop a supplementary learning material using domain specific languages for the subject control theory. Specifically we will focus on the course ERE103 (\textit{Reglerteknik}) which computer science students take at Chalmers in year 3. This is a course that is hard to grasp for many students and we belive it will be benefited by a programming approach. The course Domain Specific Languages of Mathematics (DAT326/DIT982) is the inspiration of this project and its purpose is to "present classical mathematical topics from a computing science perspective: giving specifications of the concepts introduced, paying attention to syntax and types, and ultimately constructing DSLs of some mathematical areas mentioned below.". There has also been previous projects where this approach has been used, in one project, \cite{tssarbete}, they explored DSLs uses in the course "Transforms, Signals and Systems" . In the other they examined the course "Physics for Engineers" \cite{fysikarbete}. %länka till de gamla kandidatarbeterna
-We believe the same methods will also be useful for providing supplemental learning material for the Control Theory course, especially for the computer science students.
+
+%% Förra inledningen
+\iffalse
+This project aims to develop supplementary learning material for the subject Control Theory, using domain-specific languages. Specifically, it will focus on the course ``Reglerteknik'' (\textit{ERE103}), which computer science students enrol at Chalmers in their third year of study. ERE103 is a course that is hard to grasp for many students and should benefit from a programming approach. The course Domain Specific Languages of Mathematics (course code \textit{DAT326/DIT982}, henceforth called ``DSLsofmath''), is the inspiration for this project. 
+\fi
+
+
+Control theory deals with dynamic continuous systems and how to control these. The subject is taught in various programmes at Chalmers. The computer science students of Chalmers are taught control theory their third year in the course Control Theory (Reglerteknik ERE103 \cite{ERE103}). The course seems to be hard to grasp for many students and the fail rate is high \cite{exam_stat_regler}.
+
+One proposed solution to a similar problem was introduced in the course “DSLofMath” (DAT326) \cite{DAT326}. The purpose of the course is to ``present classical mathematical topics from a computing science perspective...'' \cite{DAT326}. This is done by implementing mathematical concepts into Domain-Specific Languages (often shortened DSLs, see section \ref{sec:DSLs} for further explanation). The creators of the course have shown that students attending DSLofMath had a greater chance of passing courses, in the following year, containing and requiring a lot of prior knowledge in mathematics \cite{DSLofMathResults}. The same approach could be applied to control theory by creating one or more DSLs. We think students could benefit by learning about control theory from a programmer’s point of view.
+
+There have been previous projects where the approach of using DSLs has been used: one of these projects, which resulted in a BSc thesis \cite{tssarbete}, explored DSLs' uses in the course ``Transforms, Signals and Systems'' (SSY080) \cite{SSY080}. We will refer to this project as ``TSS with DSLs.''
+Another BSc thesis \cite{fysikarbete} examined the course ``Physics for Engineers'' (TIF085) \cite{TIF085}. We will refer to this project as ``Physics with DSLs.''
+
+The same methods used in the aforementioned projects and course should be useful for providing supplemental learning material for the Control Theory course as well---especially so for students with a background in functional programming. 
+
+\section{Terminology}
+\subsection{Domain-specific languages} \label{sec:DSLs}
+A DSL is a specialised language for a particular domain, in contrast to general purpose languages which are generalised across domains. There are a multitude of DSLs\todo[color=lessurgent]{DSL or DSLs? CJ
+\\Initialisms may be pluralised, yes. TR} in the world, of which HTML, \LaTeX, and Matlab \cite{mernik_heering_sloane_2005} might be most renowned. 
+
+In Haskell, DSLs are implemented in the meta language as deep, shallow, or intermediate embedding, and are a very powerful way of 
+both syntactically codifying a domain, as well as semantically providing the meaning of syntax and desired behaviour.
+%partly describing a problem, the syntax, and also solving it, the semantics.
 \iffalse
 Anteckningar(Slids):
 

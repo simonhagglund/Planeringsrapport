@@ -1,8 +1,10 @@
-\documentclass{article}
+\documentclass%[final]%removes todos
+{article}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{csquotes}
 \usepackage{comment}
 \usepackage{biblatex}
 \newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
@@ -11,6 +13,9 @@
 \usepackage[x11names,table]{xcolor}
 \usepackage{caption}
 \usepackage[TS1,T1]{fontenc}
+\usepackage[obeyFinal]{todonotes}
+\setlength{\marginparwidth}{4.3cm}
+%\usepackage{parskip} 
 \DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
 
 \usepackage{subfiles} % Ladda denna sist.
@@ -25,8 +30,22 @@
     urlcolor=cyan,
 }
 
+% quick color names for ease of remembering
+\colorlet{urgent}{red}
+\colorlet{fixme}{orange}
+\colorlet{lessurgent}{blue!20} 
+\colorlet{other}{yellow!30} 
 
-\title{Planning DSLOfControlTheory(?)}
+% Educational Language of Control Theory?
+% Teaching Control?
+% Domain Specific Education, Control Edition?
+% Learning the Language of Control?
+% Learning Material for Control Theory with Domain-Specific Languages?
+% Demystifying syntax and semantics of control theory.  
+% Controlling Education through Domain Specific Languages 
+\title{Demystifying the Syntax and Semantics of Control Theory:
+ \\ {\Large Developing course material using Domain-Specific Languages}}
+ % (Using Domain-specific Languages?)
 \author{
     Filip Nylander \and 
     Jakob Fihlman \and 
@@ -36,13 +55,23 @@
     Simon Hägglund
     }
     
-\date{January 2020}
+\date{VT2020} % unless anyone comes up with anything better 
 
 \begin{document}
 
 \maketitle
 
-\subfile{Introduction}
+
+% Proposed colour coding for todo notes. TR
+\setlength{\marginparwidth}{2.6cm}
+\todo[color=gray!10]{Colour coding:}
+\setlength{\marginparwidth}{4.3cm}
+\todo[color=urgent]{Urgent comments}
+\todo[color=fixme]{Fix-me comments}
+\todo[color=lessurgent]{Less urgent comments}
+\todo[color=other]{Other highlights}
+
+%% \subfile{Introduction}
 \subfile{Background}
 \subfile{Purpose}
 \subfile{Problem}
